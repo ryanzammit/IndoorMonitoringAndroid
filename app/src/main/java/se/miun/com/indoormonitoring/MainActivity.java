@@ -1,13 +1,17 @@
 package se.miun.com.indoormonitoring;
 
+import android.support.annotation.LayoutRes;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    protected void onCreateWithLayout(@Nullable Bundle savedInstanceState, @LayoutRes int layout) {
+        super.onCreateWithLayout(savedInstanceState, R.layout.activity_generic_toolbar);
+
+        setToolbarTitle("Home");
     }
 }
