@@ -1,9 +1,10 @@
-package se.miun.com.indoormonitoring;
+package se.miun.com.indoormonitoring.activities;
 
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import se.miun.com.indoormonitoring.R;
 
 public class MainActivity extends BaseActivity {
 

@@ -1,4 +1,4 @@
-package se.miun.com.indoormonitoring;
+package se.miun.com.indoormonitoring.activities;
 
 import android.os.Bundle;
 import android.support.annotation.CallSuper;
@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import se.miun.com.indoormonitoring.R;
 
 /**
  * Created by Faustino on 10-8-2016.
