@@ -10,8 +10,10 @@ public class Sensors {
     private Double temperature;
     private Double humidity;
     private Double pressure;
-    private List<Atmosphere> atmosphere;
+    private Atmosphere atmosphere;
     private Boolean smoke;
+    private String time;
+    private String version;
 
 
 }

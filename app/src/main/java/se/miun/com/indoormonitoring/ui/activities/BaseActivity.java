@@ -1,4 +1,4 @@
-package se.miun.com.indoormonitoring.activities;
+package se.miun.com.indoormonitoring.ui.activities;
 
 import android.os.Bundle;
 import android.support.annotation.CallSuper;
@@ -7,8 +7,6 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import se.miun.com.indoormonitoring.R;
 
 /**
@@ -16,7 +14,6 @@ import se.miun.com.indoormonitoring.R;
  */
 public class BaseActivity extends AppCompatActivity {
 
-    @BindView(R.id.toolbar)
     Toolbar mToolbar;
 
     @Override
@@ -43,7 +40,7 @@ public class BaseActivity extends AppCompatActivity {
     protected void onCreateWithLayout(@Nullable Bundle savedInstanceState, @LayoutRes int layout) {
         if (layout != 0) {
             setContentView(layout);
-            ButterKnife.bind(this);
+            mToolbar = (Toolbar) findViewById(R.id.generic_toolbar);
         }
     }
 }
