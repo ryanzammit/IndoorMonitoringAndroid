@@ -7,4 +7,5 @@ public class Atmosphere {
 
     private Double oxygen;
     private Double monoxide;
+    private Double dioxide;
 }

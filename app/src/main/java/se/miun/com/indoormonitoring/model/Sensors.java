@@ -7,13 +7,11 @@ import java.util.List;
  */
 public class Sensors {
 
-    private Double temperature;
-    private Double humidity;
-    private Double pressure;
-    private Atmosphere atmosphere;
-    private Boolean smoke;
-    private String time;
-    private String version;
-
+    public Double temperature;
+    public Double humidity;
+    public Double pressure;
+    public Double concentrationGases;
+    public Double combustibleGases;
+    public Double airQuality;
 
 }

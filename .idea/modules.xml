@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/IndoorMonitoring.iml" filepath="$PROJECT_DIR$/IndoorMonitoring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IndoorMonitoringAndroid.iml" filepath="$PROJECT_DIR$/IndoorMonitoringAndroid.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
