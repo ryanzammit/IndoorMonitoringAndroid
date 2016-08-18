@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+import java.util.List;
+
 import se.miun.com.indoormonitoring.R;
 import se.miun.com.indoormonitoring.model.SensorObject;
 
@@ -18,13 +20,12 @@ import se.miun.com.indoormonitoring.model.SensorObject;
  */
 public class SensorDataAdapter extends RecyclerView.Adapter<SensorDataAdapter.SensorDataViewHolder> {
 
-    private SensorObject mSensorObject;
+    private List<String> sensorValues;
     private Context mContext;
 
-    public SensorDataAdapter(Context context, SensorObject object) {
-        mSensorObject = object;
+    public SensorDataAdapter(Context context, List<String> list) {
+        sensorValues = list;
         mContext = context;
-
     }
 
     @Override
@@ -36,12 +37,12 @@ public class SensorDataAdapter extends RecyclerView.Adapter<SensorDataAdapter.Se
     @Override
     public void onBindViewHolder(SensorDataViewHolder holder, int position) {
 //        holder.sensorImage
-        holder.temperatureValue.setText(String.valueOf(mSensorObject.sensors.temperature));
-        holder.temperatureValue.setText(String.valueOf(mSensorObject.sensors.humidity));
-        holder.temperatureValue.setText(String.valueOf(mSensorObject.sensors.pressure));
-        holder.temperatureValue.setText(String.valueOf(mSensorObject.sensors.concentrationGases));
-        holder.temperatureValue.setText(String.valueOf(mSensorObject.sensors.combustibleGases));
-        holder.temperatureValue.setText(String.valueOf(mSensorObject.sensors.airQuality));
+        holder.temperatureValue.setText(sensorValues.get(0));
+        holder.temperatureValue.setText(sensorValues.get(1));
+        holder.temperatureValue.setText(sensorValues.get(2));
+        holder.temperatureValue.setText(sensorValues.get(3));
+        holder.temperatureValue.setText(sensorValues.get(4));
+        holder.temperatureValue.setText(sensorValues.get(5));
 
         //todo set images
 
@@ -49,7 +50,7 @@ public class SensorDataAdapter extends RecyclerView.Adapter<SensorDataAdapter.Se
 
     @Override
     public int getItemCount() {
-        return mSensorObject.getSize();
+        return sensorValues.size();
 //        return mSensorList.size();
     }
 

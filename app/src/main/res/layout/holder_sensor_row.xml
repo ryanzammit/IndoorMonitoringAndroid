@@ -8,8 +8,9 @@
     <LinearLayout
         android:id="@+id/row_temperature"
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#F0F0">
 
         <ImageView
             android:id="@+id/temperature_image"
@@ -31,7 +32,7 @@
     <LinearLayout
         android:id="@+id/row_humidity"
         android:layout_width="match_parent"
-        android:layout_height="45dp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <ImageView
@@ -55,7 +56,7 @@
     <LinearLayout
         android:id="@+id/row_pressure"
         android:layout_width="match_parent"
-        android:layout_height="45dp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <ImageView
@@ -79,7 +80,7 @@
     <LinearLayout
         android:id="@+id/row_concentration_gases"
         android:layout_width="match_parent"
-        android:layout_height="45dp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <ImageView
@@ -103,7 +104,7 @@
     <LinearLayout
         android:id="@+id/row_combustible_gases"
         android:layout_width="match_parent"
-        android:layout_height="45dp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <ImageView
@@ -127,7 +128,7 @@
     <LinearLayout
         android:id="@+id/row_air_quality"
         android:layout_width="match_parent"
-        android:layout_height="45dp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <ImageView

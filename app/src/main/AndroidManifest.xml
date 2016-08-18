@@ -25,6 +25,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <service
+            android:name="se.miun.com.indoormonitoring.util.RBLService"
+            android:enabled="true" />
     </application>
 
 </manifest>
