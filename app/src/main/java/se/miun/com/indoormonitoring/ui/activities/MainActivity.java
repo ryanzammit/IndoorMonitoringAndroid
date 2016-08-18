@@ -27,6 +27,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -224,15 +225,15 @@ public class MainActivity extends BaseActivity {
     private void displayData(byte[] byteArray) {
         if (byteArray != null) {
             String data = null;
-//            try {
-//                data = new String(byteArray, "UTF-8");
-//            } catch (UnsupportedEncodingException e) {
-//                e.printStackTrace();
-//            }
+            try {
+                data = new String(byteArray, "UTF-8");
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            }
 //            Log.d("FFF", "Data: " + data);
-            data = "[44.34|19.13|101839.";
-            String data2 = "14|0.166016|0.561523";
-            String data3 = "|0.375977]";
+//            data = "[44.34|19.13|101839.";
+//            String data2 = "14|0.166016|0.561523";
+//            String data3 = "|0.375977]";
 
             if (data.startsWith(jsonStartChar) && !isStringStarted) {
                 Log.d("FFF", data);
@@ -297,12 +298,12 @@ public class MainActivity extends BaseActivity {
     private void updateViews(List<String> arduinoData) {
         findViewById(R.id.sensors_layout).setVisibility(View.VISIBLE);
         findViewById(R.id.progressBar).setVisibility(View.GONE);
-        mTemperatureValue.setText("Temperature: " + arduinoData.get(0));
-        humidityValue.setText("Humidity: " + arduinoData.get(1));
-        pressureValue.setText("Pressure: " + arduinoData.get(2));
-        concentrationGasesValue.setText("Concentration Gases: " + arduinoData.get(3));
-        combustibleGasesValue.setText("Combustible Gases: " + arduinoData.get(4));
-        airQualityValue.setText("Air Quality: " + arduinoData.get(5));
+        mTemperatureValue.setText(arduinoData.get(0) + "\u00B0 Celsius");
+        humidityValue.setText(arduinoData.get(1) + " %");
+        pressureValue.setText(arduinoData.get(2) + " pascal");
+        concentrationGasesValue.setText(arduinoData.get(3) + " volt");
+        combustibleGasesValue.setText(arduinoData.get(4) + " volt");
+        airQualityValue.setText(arduinoData.get(5) + " volt");
     }
 
     private BluetoothAdapter.LeScanCallback mLeScanCallback =
